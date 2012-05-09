@@ -7,11 +7,23 @@ use App::livehttperf;
 
 App::livehttperf->run();
 
-__END__
+# PODNAME: livehttperf
+# ABSTRACT: Real life web performance testing tool
 
+
+
+__END__
 =pod
 
 =encoding utf-8
+
+=head1 NAME
+
+livehttperf - Real life web performance testing tool
+
+=head1 VERSION
+
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -31,31 +43,31 @@ __END__
 
 =over 4
 
-=item  -i, --input=file
+=item -i, --input=file
 
 Input file with recoreded session from LiveHTTP headers Firefox extension.
 
 Default: "-" (STDIN)
 
-=item  -nd, --no_delay
+=item -nd, --no_delay
 
 Send requests one after another without detected delays.
 
 Default: use delay
 
-=item  -md, --max_delay=NUM
+=item -md, --max_delay=NUM
 
 If using delay, wait for no more then NUM seconds
 
 Default: none
 
-=item  -h, --hostname=STRING
+=item -h, --hostname=STRING
 
 Override hostname in requests and set Host header to STRING.
 
 Default: no change
 
-=item  -rc, --reuse_cookies
+=item -rc, --reuse_cookies
 
 Use Cookie/Set-Cookie headers from recorded session.
 
@@ -67,34 +79,34 @@ Default: do not reuse
 
 =over 4
 
-=item  -n, --repeat=NUM
+=item -n, --repeat=NUM
 
 Repeat recorded session NUM times.
 
 Default: 10
 
-=item  -t, --timeout=NUM
+=item -t, --timeout=NUM
 
 Connection timeout.
 
 Default: 10
 
-=item  -m, --match=STRING
+=item -m, --match=STRING
 
 In addition to comparing HTTP response status line, use specified STRING header
 to confirm successful request. If provided multiple times all headers have to match.
 
 Default: none
 
-=item  -c, --concurrency=NUM
+=item -c, --concurrency=NUM
 
 Run NUM concurrent connections. Can be provided multiple times.
 
 Default: 1
 
-=item  -cs, --concurrency_step=NUM
+=item -cs, --concurrency_step=NUM
 
-=item  -cm, --concurrency_max=NUM
+=item -cm, --concurrency_max=NUM
 
 Alternatively specify maximum concurrency and incremented by provided step value.
 
@@ -108,19 +120,19 @@ Default step: 5
 
 =over 4
 
-=item  -o, --output=file
+=item -o, --output=file
 
 Save results in Excel 2007 (XLSX) format.
 
 Default: none
 
-=item  -v, --verbose
+=item -v, --verbose
 
 Repeat to increase verbosity level. Available levels: WARN, INFO, DEBUG, TRACE.
 
 Default: WARN
 
-=item  -q, --quiet
+=item -q, --quiet
 
 Display only results.
 
@@ -131,6 +143,17 @@ Default: none
 =head1 SEE ALSO
 
 * L<App::livehttperf>
+
+=head1 AUTHOR
+
+Alex J. G. Burzyński <ajgb@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2012 by Alex J. G. Burzyński <ajgb@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
 

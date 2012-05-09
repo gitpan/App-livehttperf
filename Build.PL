@@ -21,7 +21,7 @@ my %module_build_args = (
     "Alex J. G. Burzy\305\204ski <ajgb\@cpan.org>"
   ],
   "dist_name" => "App-livehttperf",
-  "dist_version" => "0.01",
+  "dist_version" => "0.02",
   "license" => "perl",
   "module_name" => "App::livehttperf",
   "recommends" => {},

@@ -2,7 +2,7 @@ NAME
     App::livehttperf - Real life web performance testing tool
 
 VERSION
-    version 0.01
+    version 0.02
 
 SYNOPSIS
         livehttperf --help
@@ -64,6 +64,8 @@ HOW TO USE
     Use LibreOffice Calc to open saved result file (XLSX format).
 
 SEE ALSO
+    *   livehttperf
+
     *   LiveHTTP headers Firefox extension
         <http://livehttpheaders.mozdev.org/>
 
