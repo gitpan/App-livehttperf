@@ -31,6 +31,7 @@ my %WriteMakefileArgs = (
     "Excel::Writer::XLSX" => 0,
     "Getopt::Long" => 0,
     "HTTP::Request" => 0,
+    "HTTP::Response" => 0,
     "LWP::UserAgent" => 0,
     "List::Util" => 0,
     "Number::Bytes::Human" => 0,
@@ -43,7 +44,7 @@ my %WriteMakefileArgs = (
     "utf8" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.02",
+  "VERSION" => "0.03",
   "test" => {
     "TESTS" => "t/*.t"
   }

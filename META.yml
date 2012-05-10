@@ -21,6 +21,7 @@ requires:
   Excel::Writer::XLSX: 0
   Getopt::Long: 0
   HTTP::Request: 0
+  HTTP::Response: 0
   LWP::UserAgent: 0
   List::Util: 0
   Number::Bytes::Human: 0
@@ -36,7 +37,7 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=App-livehttperf
   homepage: http://search.cpan.org/dist/App-livehttperf
   repository: git://github.com/ajgb/app-livehttperf.git
-version: 0.02
+version: 0.03
 x_Dist_Zilla:
   plugins:
     -

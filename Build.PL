@@ -21,7 +21,7 @@ my %module_build_args = (
     "Alex J. G. Burzy\305\204ski <ajgb\@cpan.org>"
   ],
   "dist_name" => "App-livehttperf",
-  "dist_version" => "0.02",
+  "dist_version" => "0.03",
   "license" => "perl",
   "module_name" => "App::livehttperf",
   "recommends" => {},
@@ -30,6 +30,7 @@ my %module_build_args = (
     "Excel::Writer::XLSX" => 0,
     "Getopt::Long" => 0,
     "HTTP::Request" => 0,
+    "HTTP::Response" => 0,
     "LWP::UserAgent" => 0,
     "List::Util" => 0,
     "Number::Bytes::Human" => 0,

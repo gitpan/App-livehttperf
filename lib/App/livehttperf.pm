@@ -4,7 +4,7 @@ BEGIN {
   $App::livehttperf::AUTHORITY = 'cpan:AJGB';
 }
 {
-  $App::livehttperf::VERSION = '0.02';
+  $App::livehttperf::VERSION = '0.03';
 }
 # ABSTRACT: Real life web performance testing tool
 
@@ -12,6 +12,7 @@ use strict;
 use warnings;
 
 use HTTP::Request;
+use HTTP::Response;
 use LWP::UserAgent;
 use Parallel::ForkManager;
 use Getopt::Long;
@@ -54,8 +55,8 @@ my %OPTS = (
     output => undef,
     output_xls => undef,
 );
-# subs
 
+# subs
 sub LOG(@)  { print @_, "\n" }
 sub TRACE() { $OPTS{verbosity} >= 4; }
 sub DEBUG() { $OPTS{verbosity} >= 3; }
@@ -172,7 +173,6 @@ sub configure {
         $xls_urls = $xls->add_worksheet('URLs');
     }
 
-    $test_started = [ gettimeofday ];
 }
 
 sub parse_livehttp_log {
@@ -282,12 +282,12 @@ sub parse_livehttp_log {
 
             $total_urls++;
 
-            last if @recs >= 3;
         };
     }
 }
 
 sub run_tests {
+    $test_started = [ gettimeofday ];
 
     $|=1;
 
@@ -763,7 +763,7 @@ App::livehttperf - Real life web performance testing tool
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
